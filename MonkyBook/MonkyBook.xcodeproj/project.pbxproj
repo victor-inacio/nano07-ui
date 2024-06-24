@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */; };
+		FDA694862C29F70D00D2B8EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694852C29F70D00D2B8EF /* ContentView.swift */; };
+		FDA694882C29F71000D2B8EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA694872C29F71000D2B8EF /* Assets.xcassets */; };
+		FDA6948B2C29F71000D2B8EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA6948A2C29F71000D2B8EF /* Preview Assets.xcassets */; };
+		FDA694952C29F71000D2B8EF /* MonkyBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694942C29F71000D2B8EF /* MonkyBookTests.swift */; };
+		FDA6949F2C29F71000D2B8EF /* MonkyBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA6949E2C29F71000D2B8EF /* MonkyBookUITests.swift */; };
+		FDA694A12C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694A02C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDA694912C29F71000D2B8EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDA694782C29F70D00D2B8EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDA6947F2C29F70D00D2B8EF;
+			remoteInfo = MonkyBook;
+		};
+		FDA6949B2C29F71000D2B8EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDA694782C29F70D00D2B8EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDA6947F2C29F70D00D2B8EF;
+			remoteInfo = MonkyBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FDA694802C29F70D00D2B8EF /* MonkyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookApp.swift; sourceTree = "<group>"; };
+		FDA694852C29F70D00D2B8EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FDA694872C29F71000D2B8EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDA6948A2C29F71000D2B8EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDA694902C29F71000D2B8EF /* MonkyBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkyBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA694942C29F71000D2B8EF /* MonkyBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookTests.swift; sourceTree = "<group>"; };
+		FDA6949A2C29F71000D2B8EF /* MonkyBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkyBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA6949E2C29F71000D2B8EF /* MonkyBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookUITests.swift; sourceTree = "<group>"; };
+		FDA694A02C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDA6947D2C29F70D00D2B8EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA6948D2C29F71000D2B8EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA694972C29F71000D2B8EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDA694772C29F70D00D2B8EF = {
+			isa = PBXGroup;
+			children = (
+				FDA694822C29F70D00D2B8EF /* MonkyBook */,
+				FDA694932C29F71000D2B8EF /* MonkyBookTests */,
+				FDA6949D2C29F71000D2B8EF /* MonkyBookUITests */,
+				FDA694812C29F70D00D2B8EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDA694812C29F70D00D2B8EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694802C29F70D00D2B8EF /* MonkyBook.app */,
+				FDA694902C29F71000D2B8EF /* MonkyBookTests.xctest */,
+				FDA6949A2C29F71000D2B8EF /* MonkyBookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDA694822C29F70D00D2B8EF /* MonkyBook */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */,
+				FDA694852C29F70D00D2B8EF /* ContentView.swift */,
+				FDA694872C29F71000D2B8EF /* Assets.xcassets */,
+				FDA694892C29F71000D2B8EF /* Preview Content */,
+			);
+			path = MonkyBook;
+			sourceTree = "<group>";
+		};
+		FDA694892C29F71000D2B8EF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FDA6948A2C29F71000D2B8EF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDA694932C29F71000D2B8EF /* MonkyBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694942C29F71000D2B8EF /* MonkyBookTests.swift */,
+			);
+			path = MonkyBookTests;
+			sourceTree = "<group>";
+		};
+		FDA6949D2C29F71000D2B8EF /* MonkyBookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDA6949E2C29F71000D2B8EF /* MonkyBookUITests.swift */,
+				FDA694A02C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift */,
+			);
+			path = MonkyBookUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDA6947F2C29F70D00D2B8EF /* MonkyBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDA694A42C29F71000D2B8EF /* Build configuration list for PBXNativeTarget "MonkyBook" */;
+			buildPhases = (
+				FDA6947C2C29F70D00D2B8EF /* Sources */,
+				FDA6947D2C29F70D00D2B8EF /* Frameworks */,
+				FDA6947E2C29F70D00D2B8EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonkyBook;
+			productName = MonkyBook;
+			productReference = FDA694802C29F70D00D2B8EF /* MonkyBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDA6948F2C29F71000D2B8EF /* MonkyBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDA694A72C29F71000D2B8EF /* Build configuration list for PBXNativeTarget "MonkyBookTests" */;
+			buildPhases = (
+				FDA6948C2C29F71000D2B8EF /* Sources */,
+				FDA6948D2C29F71000D2B8EF /* Frameworks */,
+				FDA6948E2C29F71000D2B8EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDA694922C29F71000D2B8EF /* PBXTargetDependency */,
+			);
+			name = MonkyBookTests;
+			productName = MonkyBookTests;
+			productReference = FDA694902C29F71000D2B8EF /* MonkyBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDA694992C29F71000D2B8EF /* MonkyBookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDA694AA2C29F71000D2B8EF /* Build configuration list for PBXNativeTarget "MonkyBookUITests" */;
+			buildPhases = (
+				FDA694962C29F71000D2B8EF /* Sources */,
+				FDA694972C29F71000D2B8EF /* Frameworks */,
+				FDA694982C29F71000D2B8EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDA6949C2C29F71000D2B8EF /* PBXTargetDependency */,
+			);
+			name = MonkyBookUITests;
+			productName = MonkyBookUITests;
+			productReference = FDA6949A2C29F71000D2B8EF /* MonkyBookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDA694782C29F70D00D2B8EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					FDA6947F2C29F70D00D2B8EF = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					FDA6948F2C29F71000D2B8EF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FDA6947F2C29F70D00D2B8EF;
+					};
+					FDA694992C29F71000D2B8EF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FDA6947F2C29F70D00D2B8EF;
+					};
+				};
+			};
+			buildConfigurationList = FDA6947B2C29F70D00D2B8EF /* Build configuration list for PBXProject "MonkyBook" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDA694772C29F70D00D2B8EF;
+			productRefGroup = FDA694812C29F70D00D2B8EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDA6947F2C29F70D00D2B8EF /* MonkyBook */,
+				FDA6948F2C29F71000D2B8EF /* MonkyBookTests */,
+				FDA694992C29F71000D2B8EF /* MonkyBookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDA6947E2C29F70D00D2B8EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA6948B2C29F71000D2B8EF /* Preview Assets.xcassets in Resources */,
+				FDA694882C29F71000D2B8EF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA6948E2C29F71000D2B8EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA694982C29F71000D2B8EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDA6947C2C29F70D00D2B8EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA694862C29F70D00D2B8EF /* ContentView.swift in Sources */,
+				FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA6948C2C29F71000D2B8EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA694952C29F71000D2B8EF /* MonkyBookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA694962C29F71000D2B8EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA694A12C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift in Sources */,
+				FDA6949F2C29F71000D2B8EF /* MonkyBookUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDA694922C29F71000D2B8EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDA6947F2C29F70D00D2B8EF /* MonkyBook */;
+			targetProxy = FDA694912C29F71000D2B8EF /* PBXContainerItemProxy */;
+		};
+		FDA6949C2C29F71000D2B8EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDA6947F2C29F70D00D2B8EF /* MonkyBook */;
+			targetProxy = FDA6949B2C29F71000D2B8EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FDA694A22C29F71000D2B8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDA694A32C29F71000D2B8EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDA694A52C29F71000D2B8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MonkyBook/Preview Content\"";
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caio.MonkyBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDA694A62C29F71000D2B8EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MonkyBook/Preview Content\"";
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caio.MonkyBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDA694A82C29F71000D2B8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caio.MonkyBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonkyBook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MonkyBook";
+			};
+			name = Debug;
+		};
+		FDA694A92C29F71000D2B8EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caio.MonkyBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonkyBook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MonkyBook";
+			};
+			name = Release;
+		};
+		FDA694AB2C29F71000D2B8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caio.MonkyBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MonkyBook;
+			};
+			name = Debug;
+		};
+		FDA694AC2C29F71000D2B8EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caio.MonkyBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MonkyBook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDA6947B2C29F70D00D2B8EF /* Build configuration list for PBXProject "MonkyBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDA694A22C29F71000D2B8EF /* Debug */,
+				FDA694A32C29F71000D2B8EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDA694A42C29F71000D2B8EF /* Build configuration list for PBXNativeTarget "MonkyBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDA694A52C29F71000D2B8EF /* Debug */,
+				FDA694A62C29F71000D2B8EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDA694A72C29F71000D2B8EF /* Build configuration list for PBXNativeTarget "MonkyBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDA694A82C29F71000D2B8EF /* Debug */,
+				FDA694A92C29F71000D2B8EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDA694AA2C29F71000D2B8EF /* Build configuration list for PBXNativeTarget "MonkyBookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDA694AB2C29F71000D2B8EF /* Debug */,
+				FDA694AC2C29F71000D2B8EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDA694782C29F70D00D2B8EF /* Project object */;
+}
