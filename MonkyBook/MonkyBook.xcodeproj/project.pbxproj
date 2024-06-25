@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */; };
-		FDA694862C29F70D00D2B8EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694852C29F70D00D2B8EF /* ContentView.swift */; };
 		FDA694882C29F71000D2B8EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA694872C29F71000D2B8EF /* Assets.xcassets */; };
 		FDA6948B2C29F71000D2B8EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA6948A2C29F71000D2B8EF /* Preview Assets.xcassets */; };
 		FDA694952C29F71000D2B8EF /* MonkyBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694942C29F71000D2B8EF /* MonkyBookTests.swift */; };
 		FDA6949F2C29F71000D2B8EF /* MonkyBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA6949E2C29F71000D2B8EF /* MonkyBookUITests.swift */; };
 		FDA694A12C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694A02C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift */; };
+		FDA694B22C2A11BB00D2B8EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694B12C2A11BB00D2B8EF /* HomeView.swift */; };
+		FDA694B42C2A12A700D2B8EF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694B32C2A12A700D2B8EF /* HomeViewModel.swift */; };
+		FDA694B72C2A12D200D2B8EF /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694B62C2A12D200D2B8EF /* Book.swift */; };
+		FDA694BD2C2B3FB500D2B8EF /* ServerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694BC2C2B3FB500D2B8EF /* ServerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		FDA694802C29F70D00D2B8EF /* MonkyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookApp.swift; sourceTree = "<group>"; };
-		FDA694852C29F70D00D2B8EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDA694872C29F71000D2B8EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDA6948A2C29F71000D2B8EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FDA694902C29F71000D2B8EF /* MonkyBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkyBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,10 @@
 		FDA6949A2C29F71000D2B8EF /* MonkyBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkyBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA6949E2C29F71000D2B8EF /* MonkyBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookUITests.swift; sourceTree = "<group>"; };
 		FDA694A02C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDA694B12C2A11BB00D2B8EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FDA694B32C2A12A700D2B8EF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FDA694B62C2A12D200D2B8EF /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		FDA694BC2C2B3FB500D2B8EF /* ServerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,10 @@
 		FDA694822C29F70D00D2B8EF /* MonkyBook */ = {
 			isa = PBXGroup;
 			children = (
+				FDA694BB2C2B3F9F00D2B8EF /* Service */,
+				FDA694B52C2A12CA00D2B8EF /* Model */,
+				FDA694AF2C2A119B00D2B8EF /* Views */,
 				FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */,
-				FDA694852C29F70D00D2B8EF /* ContentView.swift */,
 				FDA694872C29F71000D2B8EF /* Assets.xcassets */,
 				FDA694892C29F71000D2B8EF /* Preview Content */,
 			);
@@ -125,6 +133,39 @@
 				FDA694A02C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift */,
 			);
 			path = MonkyBookUITests;
+			sourceTree = "<group>";
+		};
+		FDA694AF2C2A119B00D2B8EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694B02C2A11A500D2B8EF /* HomeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDA694B02C2A11A500D2B8EF /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694B12C2A11BB00D2B8EF /* HomeView.swift */,
+				FDA694B32C2A12A700D2B8EF /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FDA694B52C2A12CA00D2B8EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694B62C2A12D200D2B8EF /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDA694BB2C2B3F9F00D2B8EF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694BC2C2B3FB500D2B8EF /* ServerController.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA694862C29F70D00D2B8EF /* ContentView.swift in Sources */,
+				FDA694B72C2A12D200D2B8EF /* Book.swift in Sources */,
 				FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */,
+				FDA694BD2C2B3FB500D2B8EF /* ServerController.swift in Sources */,
+				FDA694B42C2A12A700D2B8EF /* HomeViewModel.swift in Sources */,
+				FDA694B22C2A11BB00D2B8EF /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

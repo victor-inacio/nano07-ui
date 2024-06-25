@@ -11,7 +11,9 @@ import SwiftUI
 struct MonkyBookApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                HomeView()
+            }
         }
     }
 }

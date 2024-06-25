@@ -8,29 +8,61 @@
 import XCTest
 @testable import MonkyBook
 
-final class MonkyBookTests: XCTestCase {
-
+final class CRUDLivroTests: XCTestCase {
+    var controller : ServerController!
+    var book : Book!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        controller = ServerController()
+        book = Book(name: "Test book", sinopse: "sim", author: "Giovanni")
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        controller = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func test_ServerController_isAdding_shouldBeTrue () async {
+        // given
+        let status = try? await controller.addBook(book)
+        let bookReturned = try? await controller.getBook(book.id)
+        
+        XCTAssertEqual(status, 200)
+        XCTAssertEqual(book.name, bookReturned?.name)
+        XCTAssertEqual(book.author, bookReturned?.author)
+        XCTAssertEqual(book.sinopse, bookReturned?.sinopse)
+        XCTAssertEqual(book.image, bookReturned?.image)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_ServerController_isDeleting_shouldBeTrue () async {
+        // when
+        let status = try? await controller.addBook(book)
+        let statusDeletion = try? await controller.removeBook(book.id)
+        let getDeletedBook = try? await controller.getBook(book.id)
+        
+        // then
+        XCTAssertEqual(statusDeletion, 200)
+        XCTAssertNil(getDeletedBook)
     }
-
+    
+    func test_ServerController_isUpdating_shouldUpdate () async {
+        let status = try? await controller.addBook(book)
+        
+        let updatedBook = Book(name: "Cao", sinopse: "Lorem", author: "Ipsum")
+        let statusUpdating = try? await controller.updateBook(book.id, book: updatedBook)
+        
+        XCTAssertEqual(statusUpdating, 200)
+        
+        let returnedBook = try? await controller.getBook(book.id)
+        XCTAssertEqual(returnedBook?.name, updatedBook.name)
+        XCTAssertEqual(returnedBook?.author, updatedBook.author)
+        XCTAssertEqual(returnedBook?.sinopse, updatedBook.sinopse)
+        XCTAssertEqual(returnedBook?.image, updatedBook.image)
+    }
+    
+    func test_ServerController_isFetching_shouldFetchData () async {
+        let bookList = try? await controller.fetchBooks()
+        XCTAssertNotNil(bookList)
+    }
+    
+    
 }
