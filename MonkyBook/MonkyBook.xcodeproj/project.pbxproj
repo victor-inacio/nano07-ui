@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8D26A1F2C2B58C100A03052 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D26A1E2C2B58C100A03052 /* AddView.swift */; };
 		FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */; };
 		FDA694882C29F71000D2B8EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA694872C29F71000D2B8EF /* Assets.xcassets */; };
 		FDA6948B2C29F71000D2B8EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA6948A2C29F71000D2B8EF /* Preview Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8D26A1E2C2B58C100A03052 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		FDA694802C29F70D00D2B8EF /* MonkyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookApp.swift; sourceTree = "<group>"; };
 		FDA694872C29F71000D2B8EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8D26A1D2C2B58B200A03052 /* AddView */ = {
+			isa = PBXGroup;
+			children = (
+				B8D26A1E2C2B58C100A03052 /* AddView.swift */,
+			);
+			path = AddView;
+			sourceTree = "<group>";
+		};
 		FDA694772C29F70D00D2B8EF = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		FDA694AF2C2A119B00D2B8EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8D26A1D2C2B58B200A03052 /* AddView */,
 				FDA694B02C2A11A500D2B8EF /* HomeView */,
 			);
 			path = Views;
@@ -300,6 +311,7 @@
 			files = (
 				FDA694B72C2A12D200D2B8EF /* Book.swift in Sources */,
 				FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */,
+				B8D26A1F2C2B58C100A03052 /* AddView.swift in Sources */,
 				FDA694BD2C2B3FB500D2B8EF /* ServerController.swift in Sources */,
 				FDA694B42C2A12A700D2B8EF /* HomeViewModel.swift in Sources */,
 				FDA694B22C2A11BB00D2B8EF /* HomeView.swift in Sources */,

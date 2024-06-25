@@ -21,11 +21,12 @@ struct HomeView: View {
             }
             
             ToolbarItem {
-                Button {
-                    
+                NavigationLink {
+                    AddView()
                 } label: {
                     Image(systemName: "plus")
                 }
+
             }
         })
     }
