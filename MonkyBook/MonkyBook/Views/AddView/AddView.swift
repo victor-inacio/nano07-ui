@@ -14,25 +14,37 @@ struct AddView: View {
     @State var authorName: String = ""
     
     var body: some View {
-        ZStack {
-            VStack {
-                TextFieldBook(PlaceholderText: bookPlaceholderText, bookData: $bookName)
-                
-                TextFieldBook(PlaceholderText: authorPlaceholderText, bookData: $authorName)
-                
-                Button(action: {
-                    print("salve aqui")
-                }, label: {
-                    RoundedRectangle(cornerRadius: 12)
-                        .frame(width: 100, height: 50)
-                        .overlay {
-                            Text("Salvar")
-                                .foregroundStyle(.white)
-                        }
-                })
+        VStack(spacing: 10) {
+            
+            HStack {
+                Text("Nome do livro")
+                    .padding(.horizontal)
+                Spacer()
             }
+            
+            TextFieldBook(PlaceholderText: bookPlaceholderText, bookData: $bookName)
+            
+            HStack {
+                Text("Nome do livro")
+                    .padding(.horizontal)
+                Spacer()
+            }
+            TextFieldBook(PlaceholderText: authorPlaceholderText, bookData: $authorName)
+            
+            Button(action: {
+                print("salve aqui")
+            }, label: {
+                RoundedRectangle(cornerRadius: 12)
+                    .frame(width: 100, height: 50)
+                    .overlay {
+                        Text("Salvar")
+                            .foregroundStyle(.white)
+                    }
+            })
             .padding()
+            Spacer()
         }
+        .padding(EdgeInsets(top: 0, leading: 10, bottom: 50, trailing: 10))
     }
 }
 
