@@ -17,7 +17,7 @@ default_platform(:ios)
 
 platform :ios do
   desc "Execute testes unitários"
-  lane :tests do
+  lane :test do
     run_tests(scheme: "MonkyBook")
     # add actions here: https://docs.fastlane.tools/actions
   end
