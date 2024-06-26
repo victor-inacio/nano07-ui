@@ -14,28 +14,41 @@ struct AddView: View {
     @State var authorName: String = ""
     
     var body: some View {
-        VStack {
-            TextField(bookPlaceholderText, text: $bookName)
-                .font(.headline)
-                .padding()
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-            
-            TextField(authorPlaceholderText, text: $bookName)
-                .font(.headline)
-                .padding()
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-            
-            Button(action: {
-                print("salve aqui")
-            }, label: {
-                Text("Save")
-            })
+        ZStack {
+            VStack {
+                TextFieldBook(PlaceholderText: bookPlaceholderText, bookData: $bookName)
+                
+                TextFieldBook(PlaceholderText: authorPlaceholderText, bookData: $authorName)
+                
+                Button(action: {
+                    print("salve aqui")
+                }, label: {
+                    RoundedRectangle(cornerRadius: 12)
+                        .frame(width: 100, height: 50)
+                        .overlay {
+                            Text("Salvar")
+                                .foregroundStyle(.white)
+                        }
+                })
+            }
+            .padding()
         }
     }
 }
 
 #Preview {
     AddView()
+}
+
+struct TextFieldBook: View {
+    var PlaceholderText: String
+    @Binding var bookData: String
+    
+    var body: some View {
+        TextField(PlaceholderText, text: $bookData)
+            .font(.headline)
+            .padding()
+            .background(.tertiary)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+    }
 }
