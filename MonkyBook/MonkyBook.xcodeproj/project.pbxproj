@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B87A6A0F2C2DF7FE00EEBC14 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6A0E2C2DF7FE00EEBC14 /* LoginView.swift */; };
 		B8D26A1F2C2B58C100A03052 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D26A1E2C2B58C100A03052 /* AddView.swift */; };
 		FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */; };
 		FDA694882C29F71000D2B8EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA694872C29F71000D2B8EF /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B87A6A0E2C2DF7FE00EEBC14 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B8D26A1E2C2B58C100A03052 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		FDA694802C29F70D00D2B8EF /* MonkyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookApp.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B87A6A0D2C2DF7E700EEBC14 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				B87A6A0E2C2DF7FE00EEBC14 /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
 		B8D26A1D2C2B58B200A03052 /* AddView */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		FDA694AF2C2A119B00D2B8EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B87A6A0D2C2DF7E700EEBC14 /* LoginView */,
 				B8D26A1D2C2B58B200A03052 /* AddView */,
 				FDA694B02C2A11A500D2B8EF /* HomeView */,
 			);
@@ -313,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA694B72C2A12D200D2B8EF /* Book.swift in Sources */,
+				B87A6A0F2C2DF7FE00EEBC14 /* LoginView.swift in Sources */,
 				FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */,
 				FDA694BF2C2DF73C00D2B8EF /* AddViewModel.swift in Sources */,
 				B8D26A1F2C2B58C100A03052 /* AddView.swift in Sources */,
