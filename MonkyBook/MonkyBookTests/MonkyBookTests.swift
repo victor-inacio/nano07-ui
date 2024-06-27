@@ -21,38 +21,71 @@ final class CRUDLivroTests: XCTestCase {
         controller = nil
     }
     
-    func test_ServerController_isAdding_shouldBeTrue () {
-        controller.addBook(book) { [weak self] data, response in
-            guard let data = data else {
-                XCTFail("Dados não retornados")
-                return
-            }
-            
-            XCTAssertEqual(data.name, self?.book.name)
-            XCTAssertEqual(data.author, self?.book.author)
-            XCTAssertNil(data)
-        }
+    func test_ServerController_isAdding_shouldBeTrue () async throws {
+        // WHEN
+        let returnedData = try await controller.addBook(book)
+        let returnedBook = returnedData.0
+        let returnedStatusCode = returnedData.1
+        
+        // ASSERT
+        
+        // verificando se o status code retornado é 200
+        XCTAssertEqual(returnedStatusCode, 200)
+
+        // verificando se os dados recebidos estão de acordo com o que se esperava
+        XCTAssertEqual(returnedBook?.name, book.name)
+        XCTAssertEqual(returnedBook?.author, book.author)
     }
     
-    func test_ServerController_isDeleting_shouldBeTrue () {
+    func test_ServerController_isDeleting_shouldBeTrue () async throws {
         // when
-        var idItemCreated : UUID = UUID()
+        var idItemCreated : String = ""
         
-        controller.addBook(book) { data, response in
-            if let data {
-                idItemCreated = data.id
-            }
-        }
-        controller.removeBook(idItemCreated) { statusCode in
-            XCTAssertEqual(statusCode, 200)
+        let returnedData = try await controller.addBook(book)
+        let returnedBook = returnedData.0
+        if let idReturnedBook = returnedBook?.id {
+            idItemCreated = idReturnedBook
         }
         
-        controller.getBook(book.id) {deletedBook, response in
-            XCTAssertNil(deletedBook)
+        guard let id = UUID(uuidString: idItemCreated) else {
+            XCTFail("Não conseguimos traduzir a string para id")
+            return
         }
+        
+        let statusCode = try await controller.removeBook(id)
+        let deletedBook = try await controller.getBook(id)
+        
+        // assert
+        XCTAssertEqual(statusCode, 200)
+        XCTAssertNil(deletedBook)
     }
     
-    func test_ServerController_isUpdating_shouldUpdate () {
+    func test_ServerController_isUpdating_shouldUpdate () async throws {
+        var idItemCreated : String = ""
+        
+        let returnedData = try await controller.addBook(book)
+        if let id = returnedData.0?.id {
+            idItemCreated = id
+        }
+        
+        let updatedBook = Book(name: "Testbook 2", author: "Caio Oliveira")
+        
+        guard let id = UUID(uuidString: idItemCreated) else {
+            XCTFail("Não conseguimos traduzir a string para UUID")
+            return
+        }
+        
+        let statusCode = try await controller.updateBook(id, book: updatedBook)
+        
+        XCTAssertEqual(statusCode, 200)
+        
+        let returnedUpdatedBook = try await controller.getBook(id)
+        
+        XCTAssertNotNil(returnedUpdatedBook)
+        XCTAssertEqual(updatedBook.name, returnedUpdatedBook?.name)
+        XCTAssertEqual(updatedBook.author, returnedUpdatedBook?.author)
+        
+        /*
         var id : UUID = UUID()
         
         controller.addBook(book) {data, response in
@@ -66,16 +99,14 @@ final class CRUDLivroTests: XCTestCase {
         
         controller.getBook(id) {book, response in
             XCTAssertNotNil(book)
-            XCTAssertEqual(book?.name, updatedBook.name)
-            XCTAssertEqual(book?.author, updatedBook.author)
+            X
         }
-    }
-    
-    func test_ServerController_isFetching_shouldFetchData () {
-        controller.fetchBooks { (books, error) in
-            XCTAssertNotNil(books)
-        }
+         */
     }
     
     
+    func test_ServerController_isFetching_shouldFetchData  () async throws {
+        let books = try await controller.fetchBooks()
+        XCTAssertNotNil(books)
+    }
 }

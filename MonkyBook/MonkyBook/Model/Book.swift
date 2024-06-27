@@ -8,7 +8,7 @@
 import Foundation
 
 class Book : Encodable, Decodable{
-    var id : UUID = UUID()
+    var id : String = UUID().uuidString
     var name : String
     var author : String
     
