@@ -65,6 +65,7 @@ class ServerController {
         var request = try request(urlString)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Basic dXNlckBnbWFpbC5jb206MTIz", forHTTPHeaderField: "Authorization")
         
         // setando os parâmetros da requisição
         let parameters: [String: Any] = [
