@@ -18,6 +18,7 @@
 		FDA694B42C2A12A700D2B8EF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694B32C2A12A700D2B8EF /* HomeViewModel.swift */; };
 		FDA694B72C2A12D200D2B8EF /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694B62C2A12D200D2B8EF /* Book.swift */; };
 		FDA694BD2C2B3FB500D2B8EF /* ServerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694BC2C2B3FB500D2B8EF /* ServerController.swift */; };
+		FDA694BF2C2DF73C00D2B8EF /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694BE2C2DF73C00D2B8EF /* AddViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		FDA694B32C2A12A700D2B8EF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FDA694B62C2A12D200D2B8EF /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		FDA694BC2C2B3FB500D2B8EF /* ServerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerController.swift; sourceTree = "<group>"; };
+		FDA694BE2C2DF73C00D2B8EF /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				B8D26A1E2C2B58C100A03052 /* AddView.swift */,
+				FDA694BE2C2DF73C00D2B8EF /* AddViewModel.swift */,
 			);
 			path = AddView;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				FDA694B72C2A12D200D2B8EF /* Book.swift in Sources */,
 				FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */,
+				FDA694BF2C2DF73C00D2B8EF /* AddViewModel.swift in Sources */,
 				B8D26A1F2C2B58C100A03052 /* AddView.swift in Sources */,
 				FDA694BD2C2B3FB500D2B8EF /* ServerController.swift in Sources */,
 				FDA694B42C2A12A700D2B8EF /* HomeViewModel.swift in Sources */,

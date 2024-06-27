@@ -10,8 +10,8 @@ import SwiftUI
 struct AddView: View {
     let bookPlaceholderText: String = "Add book name here..."
     let authorPlaceholderText: String = "Add author's name here..."
-    @State var bookName: String = ""
-    @State var authorName: String = ""
+    @StateObject var vm = AddViewModel()
+    @Environment (\.dismiss) var dismiss
     
     var body: some View {
         VStack(spacing: 10) {
@@ -22,17 +22,18 @@ struct AddView: View {
                 Spacer()
             }
             
-            TextFieldBook(PlaceholderText: bookPlaceholderText, bookData: $bookName)
+            TextFieldBook(PlaceholderText: bookPlaceholderText, bookData: $vm.bookName)
             
             HStack {
-                Text("Nome do livro")
+                Text("Autor do livro")
                     .padding(.horizontal)
                 Spacer()
             }
-            TextFieldBook(PlaceholderText: authorPlaceholderText, bookData: $authorName)
+            TextFieldBook(PlaceholderText: authorPlaceholderText, bookData: $vm.authorName)
             
             Button(action: {
-                print("salve aqui")
+                vm.saveBook()
+                dismiss()
             }, label: {
                 RoundedRectangle(cornerRadius: 12)
                     .frame(width: 100, height: 50)
