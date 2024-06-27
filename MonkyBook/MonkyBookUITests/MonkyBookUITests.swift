@@ -8,34 +8,47 @@
 import XCTest
 
 final class MonkyBookUITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
+    func testAddBook() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let addButton = app.navigationBars["Library App"].buttons["Add"]
+        XCTAssert(addButton.exists)
+        addButton.tap()
+        
+        let bookNameTextField = app.textFields["Add book name here..."]
+        XCTAssert(bookNameTextField.exists)
+        bookNameTextField.tap()
+        bookNameTextField.typeText("Houseki No Kuni")
+        
+        
+        let addAuthorSNameHereTextField = app.textFields["Add author's name here..."]
+        XCTAssert(addAuthorSNameHereTextField.exists)
+        addAuthorSNameHereTextField.tap()
+        addAuthorSNameHereTextField.typeText("Houseki No Kuni")
+        
+        
+        let saveButton = app.buttons["Salvar"]
+        XCTAssert(saveButton.exists)
+        saveButton.tap()
+        
+        let housekiNoKuniStaticText = app.collectionViews.staticTexts["Houseki No Kuni"]
+        XCTAssert(housekiNoKuniStaticText.exists)
     }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    
+    func testRemoveBook () throws {
+        
+        let collectionViewsQuery = XCUIApplication().collectionViews
+        let element = collectionViewsQuery.children(matching: .cell).element(boundBy: 1).children(matching: .other).element(boundBy: 1).children(matching: .other).element
+        let element2 = element.children(matching: .other).element
+        let housekiNoKuniStaticText = element2.children(matching: .staticText).matching(identifier: "Houseki No Kuni").element(boundBy: 1)
+        
+        XCTAssert(housekiNoKuniStaticText.exists)
+        housekiNoKuniStaticText.swipeLeft()
+        
+        let deleteButton = collectionViewsQuery.buttons["Delete"]
+        XCTAssert(deleteButton.exists)
+        deleteButton.tap()
     }
 }

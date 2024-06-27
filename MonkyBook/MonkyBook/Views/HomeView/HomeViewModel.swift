@@ -12,22 +12,23 @@ extension HomeView {
         let controller = ServerController()
         @Published var books : [Book] = []
         
-        
         func removeBook (_ index : IndexSet) {
             books.remove(atOffsets: index)
 
-            let index = index.first!
-            let removedBook = books[index]
-            
-            let idString = removedBook.id
-            
-            guard let id = UUID(uuidString: idString) else {
-                print("Erro ao transformar idString em UUID")
-                return
-            }
-            
-            Task {
-                let _ = try await controller.removeBook(id)
+            if let index = index.first {
+                if books.count > index {
+                    let removedBook = books[index]
+                    let idString = removedBook.id
+                    
+                    guard let id = UUID(uuidString: idString) else {
+                        print("Erro ao transformar idString em UUID")
+                        return
+                    }
+                    
+                    Task {
+                        let _ = try await controller.removeBook(id)
+                    }
+                }
             }
         }
         

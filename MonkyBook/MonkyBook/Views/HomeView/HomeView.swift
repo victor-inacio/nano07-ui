@@ -14,11 +14,15 @@ struct HomeView: View {
         VStack {
             List {
                 ForEach(vm.books, id: \.id) {book in
-                    HStack {
-                        Text(book.name)
-                        Text(book.author)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                    NavigationLink {
+                        EditView(book: book)
+                    } label: {
+                        HStack {
+                            Text(book.name)
+                            Text(book.author)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
                 .onDelete(perform: { indexSet in
