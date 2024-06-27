@@ -14,54 +14,67 @@ final class CRUDLivroTests: XCTestCase {
     
     override func setUpWithError() throws {
         controller = ServerController()
-        book = Book(name: "Test book", sinopse: "sim", author: "Giovanni")
+        book = Book(name: "Test book", author: "Giovanni")
     }
     
     override func tearDownWithError() throws {
         controller = nil
     }
     
-    func test_ServerController_isAdding_shouldBeTrue () async {
-        // given
-        let status = try? await controller.addBook(book)
-        let bookReturned = try? await controller.getBook(book.id)
-        
-        XCTAssertEqual(status, 200)
-        XCTAssertEqual(book.name, bookReturned?.name)
-        XCTAssertEqual(book.author, bookReturned?.author)
-        XCTAssertEqual(book.sinopse, bookReturned?.sinopse)
-        XCTAssertEqual(book.image, bookReturned?.image)
+    func test_ServerController_isAdding_shouldBeTrue () {
+        controller.addBook(book) { [weak self] data, response in
+            guard let data = data else {
+                XCTFail("Dados não retornados")
+                return
+            }
+            
+            XCTAssertEqual(data.name, self?.book.name)
+            XCTAssertEqual(data.author, self?.book.author)
+            XCTAssertNil(data)
+        }
     }
     
-    func test_ServerController_isDeleting_shouldBeTrue () async {
+    func test_ServerController_isDeleting_shouldBeTrue () {
         // when
-        let status = try? await controller.addBook(book)
-        let statusDeletion = try? await controller.removeBook(book.id)
-        let getDeletedBook = try? await controller.getBook(book.id)
+        var idItemCreated : UUID = UUID()
         
-        // then
-        XCTAssertEqual(statusDeletion, 200)
-        XCTAssertNil(getDeletedBook)
+        controller.addBook(book) { data, response in
+            if let data {
+                idItemCreated = data.id
+            }
+        }
+        controller.removeBook(idItemCreated) { statusCode in
+            XCTAssertEqual(statusCode, 200)
+        }
+        
+        controller.getBook(book.id) {deletedBook, response in
+            XCTAssertNil(deletedBook)
+        }
     }
     
-    func test_ServerController_isUpdating_shouldUpdate () async {
-        let status = try? await controller.addBook(book)
+    func test_ServerController_isUpdating_shouldUpdate () {
+        var id : UUID = UUID()
         
-        let updatedBook = Book(name: "Cao", sinopse: "Lorem", author: "Ipsum")
-        let statusUpdating = try? await controller.updateBook(book.id, book: updatedBook)
+        controller.addBook(book) {data, response in
+            //if let dataId = data?.id {id = dataId}
+        }
         
-        XCTAssertEqual(statusUpdating, 200)
+        let updatedBook = Book(name: "Lorem", author: "Ipsum")
+        controller.updateBook(id, book: updatedBook) {statusCode in
+            XCTAssertEqual(statusCode, 200)
+        }
         
-        let returnedBook = try? await controller.getBook(book.id)
-        XCTAssertEqual(returnedBook?.name, updatedBook.name)
-        XCTAssertEqual(returnedBook?.author, updatedBook.author)
-        XCTAssertEqual(returnedBook?.sinopse, updatedBook.sinopse)
-        XCTAssertEqual(returnedBook?.image, updatedBook.image)
+        controller.getBook(id) {book, response in
+            XCTAssertNotNil(book)
+            XCTAssertEqual(book?.name, updatedBook.name)
+            XCTAssertEqual(book?.author, updatedBook.author)
+        }
     }
     
-    func test_ServerController_isFetching_shouldFetchData () async {
-        let bookList = try? await controller.fetchBooks()
-        XCTAssertNotNil(bookList)
+    func test_ServerController_isFetching_shouldFetchData () {
+        controller.fetchBooks { (books, error) in
+            XCTAssertNotNil(books)
+        }
     }
     
     
