@@ -39,7 +39,12 @@ class ServerController {
     ///     - id: id do livro que se deseja recuperar.
     /// - returns: o book buscado.
     func getBook (_ id : UUID) async throws -> Book? {
-        let request = try request(urlString)
+        let urlString = self.urlString + "/\(id)"
+                
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        let request = URLRequest(url: url)
         
         do {
             let (data, _) = try await URLSession.shared.data(for: request)
@@ -82,12 +87,21 @@ class ServerController {
     ///     - id: id do livro que se deseja remover
     /// - returns: Um inteiro que representa o status code da requisição.
     func removeBook (_ id : UUID) async throws -> Int? {
-        var request = try request(urlString + "/\(id)")
+        let urlString = urlString + "/\(id)"
+                
+        // verificando se a url existe, se não jogando um erro de URL ruim
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+                
+        var request = URLRequest(url: url)
+        
         request.httpMethod = "DELETE"
         
         let (_, response) = try await URLSession.shared.data(for: request)
         
         let responseHTTP = response as? HTTPURLResponse
+        
         return responseHTTP?.statusCode
     }
     
@@ -97,7 +111,14 @@ class ServerController {
     ///     - book: um objeto do tipo Book que vai conter as informações que vão ser alteradas, como nome e autor
     /// - returns: Um inteiro que representa o status code da requisição.
     func updateBook (_ id : UUID, book: Book) async throws -> Int?  {
-        var request = try request(self.urlString + "/\(id)")
+        let urlString = self.urlString + "/\(id)"
+                
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        var request = URLRequest(url: url)
+        
+        
         request.httpMethod = "PUT"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         

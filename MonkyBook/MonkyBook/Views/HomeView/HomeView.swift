@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var vm = HomeViewModel()
+    
     var body: some View {
         VStack {
             List {
-                
+                ForEach(vm.books, id: \.id) {book in
+                    HStack {
+                        Text(book.name)
+                        Text(book.author)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .onDelete(perform: { indexSet in
+                    vm.removeBook(indexSet)
+                })
+            }
+            .refreshable {
+                vm.fetchBooks()
             }
         }
         .navigationTitle("Library App")
@@ -29,6 +44,9 @@ struct HomeView: View {
 
             }
         })
+        .onAppear {
+            vm.fetchBooks()
+        }
     }
 }
 
