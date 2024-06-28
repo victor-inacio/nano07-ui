@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B87A6A0F2C2DF7FE00EEBC14 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6A0E2C2DF7FE00EEBC14 /* LoginView.swift */; };
+		B8D26A1F2C2B58C100A03052 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D26A1E2C2B58C100A03052 /* AddView.swift */; };
 		FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */; };
-		FDA694862C29F70D00D2B8EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694852C29F70D00D2B8EF /* ContentView.swift */; };
 		FDA694882C29F71000D2B8EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA694872C29F71000D2B8EF /* Assets.xcassets */; };
 		FDA6948B2C29F71000D2B8EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA6948A2C29F71000D2B8EF /* Preview Assets.xcassets */; };
 		FDA694952C29F71000D2B8EF /* MonkyBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694942C29F71000D2B8EF /* MonkyBookTests.swift */; };
 		FDA6949F2C29F71000D2B8EF /* MonkyBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA6949E2C29F71000D2B8EF /* MonkyBookUITests.swift */; };
 		FDA694A12C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694A02C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift */; };
+		FDA694B22C2A11BB00D2B8EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694B12C2A11BB00D2B8EF /* HomeView.swift */; };
+		FDA694B42C2A12A700D2B8EF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694B32C2A12A700D2B8EF /* HomeViewModel.swift */; };
+		FDA694B72C2A12D200D2B8EF /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694B62C2A12D200D2B8EF /* Book.swift */; };
+		FDA694BD2C2B3FB500D2B8EF /* ServerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694BC2C2B3FB500D2B8EF /* ServerController.swift */; };
+		FDA694BF2C2DF73C00D2B8EF /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694BE2C2DF73C00D2B8EF /* AddViewModel.swift */; };
+		FDA694C22C2DFF2E00D2B8EF /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694C12C2DFF2E00D2B8EF /* EditView.swift */; };
+		FDA694C42C2E015800D2B8EF /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA694C32C2E015800D2B8EF /* EditViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B87A6A0E2C2DF7FE00EEBC14 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B8D26A1E2C2B58C100A03052 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		FDA694802C29F70D00D2B8EF /* MonkyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookApp.swift; sourceTree = "<group>"; };
-		FDA694852C29F70D00D2B8EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDA694872C29F71000D2B8EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDA6948A2C29F71000D2B8EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FDA694902C29F71000D2B8EF /* MonkyBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkyBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +53,13 @@
 		FDA6949A2C29F71000D2B8EF /* MonkyBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkyBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA6949E2C29F71000D2B8EF /* MonkyBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookUITests.swift; sourceTree = "<group>"; };
 		FDA694A02C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkyBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDA694B12C2A11BB00D2B8EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FDA694B32C2A12A700D2B8EF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FDA694B62C2A12D200D2B8EF /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		FDA694BC2C2B3FB500D2B8EF /* ServerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerController.swift; sourceTree = "<group>"; };
+		FDA694BE2C2DF73C00D2B8EF /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		FDA694C12C2DFF2E00D2B8EF /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		FDA694C32C2E015800D2B8EF /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B87A6A0D2C2DF7E700EEBC14 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				B87A6A0E2C2DF7FE00EEBC14 /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		B8D26A1D2C2B58B200A03052 /* AddView */ = {
+			isa = PBXGroup;
+			children = (
+				B8D26A1E2C2B58C100A03052 /* AddView.swift */,
+				FDA694BE2C2DF73C00D2B8EF /* AddViewModel.swift */,
+			);
+			path = AddView;
+			sourceTree = "<group>";
+		};
 		FDA694772C29F70D00D2B8EF = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +127,10 @@
 		FDA694822C29F70D00D2B8EF /* MonkyBook */ = {
 			isa = PBXGroup;
 			children = (
+				FDA694BB2C2B3F9F00D2B8EF /* Service */,
+				FDA694B52C2A12CA00D2B8EF /* Model */,
+				FDA694AF2C2A119B00D2B8EF /* Views */,
 				FDA694832C29F70D00D2B8EF /* MonkyBookApp.swift */,
-				FDA694852C29F70D00D2B8EF /* ContentView.swift */,
 				FDA694872C29F71000D2B8EF /* Assets.xcassets */,
 				FDA694892C29F71000D2B8EF /* Preview Content */,
 			);
@@ -125,6 +160,51 @@
 				FDA694A02C29F71000D2B8EF /* MonkyBookUITestsLaunchTests.swift */,
 			);
 			path = MonkyBookUITests;
+			sourceTree = "<group>";
+		};
+		FDA694AF2C2A119B00D2B8EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694C02C2DFF2200D2B8EF /* EditView */,
+				B87A6A0D2C2DF7E700EEBC14 /* LoginView */,
+				B8D26A1D2C2B58B200A03052 /* AddView */,
+				FDA694B02C2A11A500D2B8EF /* HomeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDA694B02C2A11A500D2B8EF /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694B12C2A11BB00D2B8EF /* HomeView.swift */,
+				FDA694B32C2A12A700D2B8EF /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FDA694B52C2A12CA00D2B8EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694B62C2A12D200D2B8EF /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDA694BB2C2B3F9F00D2B8EF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694BC2C2B3FB500D2B8EF /* ServerController.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FDA694C02C2DFF2200D2B8EF /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				FDA694C12C2DFF2E00D2B8EF /* EditView.swift */,
+				FDA694C32C2E015800D2B8EF /* EditViewModel.swift */,
+			);
+			path = EditView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +337,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA694862C29F70D00D2B8EF /* ContentView.swift in Sources */,
+				FDA694C42C2E015800D2B8EF /* EditViewModel.swift in Sources */,
+				FDA694B72C2A12D200D2B8EF /* Book.swift in Sources */,
+				B87A6A0F2C2DF7FE00EEBC14 /* LoginView.swift in Sources */,
 				FDA694842C29F70D00D2B8EF /* MonkyBookApp.swift in Sources */,
+				FDA694BF2C2DF73C00D2B8EF /* AddViewModel.swift in Sources */,
+				B8D26A1F2C2B58C100A03052 /* AddView.swift in Sources */,
+				FDA694C22C2DFF2E00D2B8EF /* EditView.swift in Sources */,
+				FDA694BD2C2B3FB500D2B8EF /* ServerController.swift in Sources */,
+				FDA694B42C2A12A700D2B8EF /* HomeViewModel.swift in Sources */,
+				FDA694B22C2A11BB00D2B8EF /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,10 +507,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MonkyBook/Preview Content\"";
-				DEVELOPMENT_TEAM = 2XQLYL986B;
+				DEVELOPMENT_TEAM = TLC9D54B8V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -437,6 +526,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.caio.MonkyBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,10 +538,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MonkyBook/Preview Content\"";
-				DEVELOPMENT_TEAM = 2XQLYL986B;
+				DEVELOPMENT_TEAM = TLC9D54B8V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -466,6 +557,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.caio.MonkyBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
