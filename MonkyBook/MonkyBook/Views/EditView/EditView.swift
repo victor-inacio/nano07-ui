@@ -20,7 +20,7 @@ struct EditView: View {
             
             Text("Nome do autor: ")
                 .bold()
-            TextFieldBook(PlaceholderText: "Insert book name here", bookData: $vm.bookAuthor)
+            TextFieldBook(PlaceholderText: "Insert book author here", bookData: $vm.bookAuthor)
             
             Button {
                 vm.editBook()
